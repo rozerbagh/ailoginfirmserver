@@ -5,7 +5,6 @@ const data = require('../data/users.json');
  * @param {*} req 
  * @param {*} next 
  */
-console.log(data);
 function login(res, req, next){
   try {
     const {email, password} = req.body;
