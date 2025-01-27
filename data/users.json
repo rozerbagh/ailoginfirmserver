@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "name": "User1",
+    "password": "User1@123",
+    "email": "user1@exmaple.com"
+  },
+  {
+    "id": 2,
+    "name": "User2",
+    "password": "User2@123",
+    "email": "user2@exmaple.com"
+  }
+
+]
