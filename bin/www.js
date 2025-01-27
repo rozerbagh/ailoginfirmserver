@@ -12,7 +12,7 @@ var http = require('http');
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '6000');
+var port = normalizePort(process.env.PORT || '5500');
 app.set('port', port);
 
 /**
@@ -26,7 +26,7 @@ var server = http.createServer(app);
  */
 
 server.listen(port,function(){ 
-  console.log('Server running on port 6000');
+  console.log('Server running on port 5500');
 });
 server.on('error', onError);
 server.on('listening', onListening);
