@@ -26,13 +26,17 @@ function login(res, req, next){
 function update(res, req, next){
   try {
     const {email, password, name} = req.body;
-    const user = data.find(user => user.email === email);
+    const {id} = req.params;
+    const user = data.filter((user) => user.id === id);
+    console.log(user, data);
     if(!user){
       res.status(404).json({statusCode: 404, message: "User not found"});
       return
     }
     user.password = password;
     user.name = name;
+    user.email = email;
+    console.log(user)
     res.status(200).json({statusCode: 200, message: "User updated successfully", data: user});
   } catch (error) {
     res.status(500).json({statusCode: 500, message: "Internal server error"});

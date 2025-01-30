@@ -5,7 +5,7 @@ const { login, update, getUser } = require("../controllers/user.controller");
 router.post("/login", function (req, res, next) {
   login(res, req, next);
 });
-router.patch("/update", function (req, res, next) {
+router.patch("/update/:id", function (req, res, next) {
   update(res, req, next);
 });
 router.get("/:id", function (req, res, next) { 
